@@ -6,6 +6,7 @@
 	<title>Wei's homepage</title>
 	<style>
 		@import url('https://fonts.googleapis.com/css2?family=Tektur:wght@400..900&display=swap');
+		@import url('https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&family=Tektur:wght@400..900&display=swap');
 		* {
 			box-sizing: border-box;
 			padding: 0;
@@ -29,9 +30,21 @@
 			gap: 1em;
     	}
 
-		header h1{
+		h1, h2{
 			font-family: 'Tektur', serif;
+		}
+
+		h1{
 			color: #d5b0a1;
+		}
+
+		h2{
+			color: #746C70;
+		}
+
+		p {
+			font-family: 'Exo', sans-serif;
+			line-height: 1.5;
 		}
 
 		.profile {
@@ -44,10 +57,12 @@
 
 		.keyword-name {
 			color: #E2DED0;
+			text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 		}
 
 		.keyword-education {
 			color: #edbbbb;
+			text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 		}
 
 		.profile img {
@@ -58,14 +73,72 @@
             object-fit: cover;
         }
 
+		main{
+			grid-area: main-content;
+			display: grid;
+			gap: 1.2em;
+			margin: 3%;
+		}
+
+		section{
+			display: grid;
+			gap: 1em;
+		}
+
+		.island-pictures{
+			margin-left: 5%;
+			margin-right: 5%;
+			margin-top: 1%;
+			display: grid;
+			grid-template-columns: 1fr 1fr 1fr;
+			gap: 1.5em;
+		}
+
+		.island-pictures img {
+            width: 100%;
+			aspect-ratio: 5/4;
+            height: auto;
+            object-fit: cover;
+        }
+
+		footer {
+			grid-area: footer;
+			display: grid;
+			justify-content: center;
+			align-items: center;
+			margin-bottom: 1em;
+		}
+
     </style>
 </head>
 <body>
 	<header>
 		<div class = "profile">
 			<h1> I am <span class = "keyword-name">Wei Xia</span>, a computer science student at <span class = "keyword-education">Cornell Tech</span>.</h1>
-			<img src="profile picture.jpg" alt="Profile Picture">
+			<img src="img/profile picture.jpg" alt="Profile Picture">
 		</div>
 	</header>
+
+	<main>
+		<section class = "bio">
+			<h2> &#127891 A little about me </h2>
+			<p> I am currently pursuing a master’s degree in computer science at Cornell Tech. I have cultivated a robust foundation in software development and machine learning. When I’m not programming, you’ll find me listening to music, playing the piano, or creating simple melodies on the GarageBand app. I live on Roosevelt Island. Check out the pictures I took in the next section!</p>
+		</section>
+		<section class = "IslandLife">
+			<h2> &#127754 Island Life </h2>
+			<div class = "island-pictures">
+				<img src="img/island1.jpg" alt="Island Picture 1">
+				<img src="img/island2.jpg" alt="Island Picture 2">
+				<img src="img/island3.jpg" alt="Island Picture 3">
+				<img src="img/island4.jpg" alt="Island Picture 4">
+				<img src="img/island5.jpg" alt="Island Picture 5">
+				<img src="img/island6.jpg" alt="Island Picture 6">
+			</div>
+		</section>
+	</main>
+
+	<footer>
+		<p>&copy; 2025 Wei's homepage. All rights reserved.</p>
+	</footer>
 </body>
 </html>
