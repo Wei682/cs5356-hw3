@@ -4,8 +4,68 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Wei's homepage</title>
+	<style>
+		@import url('https://fonts.googleapis.com/css2?family=Tektur:wght@400..900&display=swap');
+		* {
+			box-sizing: border-box;
+			padding: 0;
+			margin: 0;
+		}
+
+        body {
+            background-color: #E2DED0;
+			font-size: 20px;
+			display: grid;
+			grid-template-areas:
+			"header"
+			"main-content"
+			"footer";
+        }
+
+		header {
+			grid-area: header;
+			background: #4E4F50;
+			display: grid;
+			gap: 1em;
+    	}
+
+		header h1{
+			font-family: 'Tektur', serif;
+			color: #d5b0a1;
+		}
+
+		.profile {
+			display: grid;
+			grid-template-columns: 2fr 1fr;
+			align-items: center;
+			gap: 10px;
+			margin: 5%;
+		}
+
+		.keyword-name {
+			color: #E2DED0;
+		}
+
+		.keyword-education {
+			color: #edbbbb;
+		}
+
+		.profile img {
+            width: 100%;
+			aspect-ratio: 1/1;
+            height: auto;
+            border-radius: 10%;
+            object-fit: cover;
+        }
+
+    </style>
 </head>
 <body>
-Test change for page deployment
+	<header>
+		<div class = "profile">
+			<h1> I am <span class = "keyword-name">Wei Xia</span>, a computer science student at <span class = "keyword-education">Cornell Tech</span>.</h1>
+			<img src="profile picture.jpg" alt="Profile Picture">
+		</div>
+	</header>
 </body>
 </html>
