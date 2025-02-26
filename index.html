@@ -36,6 +36,7 @@
 
 		h1{
 			color: #d5b0a1;
+			animation: profileAnimation 2s;
 		}
 
 		h2{
@@ -46,6 +47,21 @@
 			font-family: 'Exo', sans-serif;
 			line-height: 1.5;
 		}
+
+		@keyframes profileAnimation {
+            0% {
+                opacity: 0.3;
+                transform: translateY(-1em);
+            }
+            50% {
+                opacity: 0.6;
+                transform: translateY(0.5em);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
 
 		.profile {
 			display: grid;
@@ -198,6 +214,8 @@
 		<section class = "writeup">
 			<h2> &#128214 Homework Writeup </h2>
 			<p>I explored the HTML video element. I found that there's a "controls" attribute that allows people to control the video, e.g., play, pause, and set volumes. I also found that I can add text between the video tags in case the video cannot be played. This text will only be displayed when the browser does not support the video tags.</p>
+
+			<p> I also used CSS animation and applied it to my H1 header. I learned that I need to write the @keyframes rules for the animation and provide them with a name. Then, I used this name to link the animation to the corresponding elements. An important thing to note is that I must specify the animation-duration; otherwise, the animation will not occur since the default duration is 0.</p>
 		</section>
 	</main>
 
