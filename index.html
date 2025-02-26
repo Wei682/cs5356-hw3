@@ -56,6 +56,16 @@
 			line-height: 1.5;
 		}
 
+		.mouseEffect {
+            position: absolute;
+            width: 2vh;
+            height: 2vh;
+            background: #e1b9b7;
+            border-radius: 50%;
+            opacity: 0.5;
+            transition: opacity 1s ease-out;
+        }
+
 		@keyframes profileAnimation {
             0% {
                 opacity: 0.3;
@@ -259,12 +269,24 @@
 
 			<p> I also used CSS animation and applied it to my H1 header. I learned that I need to write the @keyframes rules for the animation and provide them with a name. Then, I used this name to link the animation to the corresponding elements. An important thing to note is that I must specify the animation-duration; otherwise, the animation will not occur since the default duration is 0.</p>
 
-			<p> I completed the second extra credit task where I added meta elements to allow website previews on different social media. Based on the reading material, I utilized the open graph tags since they support the most social media.</p>
+			<p> I completed the first and the second extra credit tasks. For the first task, I added an interactive mouse trailing effect based on the mouse position using the mousemove event. For the second task, I added meta elements to allow website previews on different social media. Based on the reading material, I utilized the open graph tags since they support the most social media.</p>
 		</section>
 	</main>
 
 	<footer>
 		<p>&copy; 2025 Wei's homepage. All rights reserved.</p>
 	</footer>
+
+	<script>
+        document.addEventListener("mousemove", (moveEvent) => {
+            let mouseEffect = document.createElement("div");
+            mouseEffect.classList.add("mouseEffect");
+            document.body.appendChild(mouseEffect);
+            mouseEffect.style.left = `${moveEvent.pageX}px`;
+            mouseEffect.style.top = `${moveEvent.pageY}px`;
+			
+            setTimeout(() => mouseEffect.remove(), 100);
+        });
+    </script>
 </body>
 </html>
